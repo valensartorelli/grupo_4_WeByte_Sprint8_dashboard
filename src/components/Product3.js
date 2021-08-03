@@ -14,7 +14,7 @@ class Product extends Component {
         let props = await (await fetch('http://localhost:3001/api/products')).json();
         // console.log(props);
         if (props) {
-            this.setState({products: props.data})
+            this.setState({products: props.data.list})
             console.log(this.state.products);
         }
 

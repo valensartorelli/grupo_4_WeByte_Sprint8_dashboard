@@ -65,7 +65,7 @@ class Table extends Component {
                     {
                       this.props.heads.map( (head, i) => 
                         i === 0 ? <th className="letters-color" key={i} scope="row">{this.state.data[value][head.prop]}</th>
-                        : <td key={i}>{this.state.data[value][head.prop]}</td>
+                        : <td key={i} className="letters-color">{this.state.data[value][head.prop]}</td>
                       )
                     }
                 </tr>
