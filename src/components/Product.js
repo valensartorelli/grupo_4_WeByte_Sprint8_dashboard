@@ -7,8 +7,8 @@ function Product (){
         return (
             <React.Fragment>         
             {/*<!-- TABLE PRODUCTS LIST -->*/}
-            <div className="row margin">
-                
+            <div className="row">
+            <div className="card-body">
             <BigPanel title={"Listado de productos"} key='productsPanel'>
                 <Table heads={[
                   {prop: 'id', title: 'ID'},
@@ -20,6 +20,8 @@ function Product (){
                 key={'products'}
                 />
         </BigPanel>
+        </div>
+
         </div>
         </React.Fragment>
         );

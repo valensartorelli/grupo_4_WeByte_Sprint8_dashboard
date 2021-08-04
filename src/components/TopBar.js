@@ -20,16 +20,16 @@ function TopBar(){
 							<a className="nav-link dropdown-toggle" href="/" id="alertsDropdown">
 								<i className="fas fa-bell fa-fw"></i>
 								{/*<!-- Counter - Alerts -->*/}
-								<span className="badge badge-danger badge-counter">6+</span>
+								<span className="badge badge-danger badge-counter color-counter">6+</span>
 							</a>
 						</li>
 
 						{/*<!-- Nav Item - Messages -->*/}
 						<li className="nav-item dropdown no-arrow mx-1">
 							<a className="nav-link dropdown-toggle" href="/" id="messagesDropdown">
-								<i className="fas fa-envelope fa-fw"></i>
+								<i className="fas fa-envelope fa-fw " ></i>
 								{/*<!-- Counter - Messages -->*/}
-								<span className="badge badge-danger badge-counter">12</span>
+								<span className="badge badge-danger badge-counter color-counter">12</span>
 							</a>
 						</li>
 

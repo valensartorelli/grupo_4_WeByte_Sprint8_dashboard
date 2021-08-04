@@ -60,6 +60,8 @@ class Product extends Component {
                         </table>
                     </div>
                 </div>
+
+                
             </div>
             </React.Fragment>
         );
