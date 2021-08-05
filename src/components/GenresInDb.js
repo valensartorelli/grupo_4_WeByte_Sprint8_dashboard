@@ -45,12 +45,12 @@ class GenresInDb extends Component{
                         </div>
                         <div className="card-body fondoCaja">
                             <div  className="row">
-                                {
+                                {/* {
                                     //console.log(this.state.genresList)
                                     this.state.usersList.map((user,index)=>{
                                         return  <Genre  {...user}  key={index} />
                                     })
-                                }
+                                } */}
                             </div>
                         </div>
                     </div>
