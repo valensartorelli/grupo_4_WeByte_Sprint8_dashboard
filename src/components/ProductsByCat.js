@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 //Importar nuestro componente
 import Genre from './Genre';
 
-class GenresInDb extends Component{
+class ProductsByCat extends Component{
     constructor(){
         super()
         this.state ={
@@ -41,7 +41,7 @@ class GenresInDb extends Component{
                 <div className="col-lg-6 mb-4">						
                     <div className="card shadow mb-4 " >
                         <div className="card-header py-3">
-                            <h6  onMouseOver = { () => this.fondo()}  className="m-0 font-weight-bold text-gray-800 titulo">Usuarios in Data Base</h6>
+                            <h6  onMouseOver = { () => this.fondo()}  className="m-0 font-weight-bold text-gray-800 titulo">Productos por categoría</h6>
                         </div>
                         <div className="card-body fondoCaja">
                             <div  className="row">
@@ -60,4 +60,4 @@ class GenresInDb extends Component{
     )
     }
 }
-export default GenresInDb;
+export default ProductsByCat;

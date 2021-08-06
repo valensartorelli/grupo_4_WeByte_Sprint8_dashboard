@@ -7,8 +7,8 @@ function Product (){
         return (
             <React.Fragment>         
             {/*<!-- TABLE PRODUCTS LIST -->*/}
-            <div className="row">
-            <div className="card-body">
+            <div className="row margin">
+           
             <BigPanel title={"Listado de productos"} key='productsPanel'>
                 <Table heads={[
                   {prop: 'id', title: 'ID'},
@@ -28,11 +28,11 @@ function Product (){
                   {prop: 'lastName', title: 'Apellido'},
                   {prop: 'email', title: 'Correo'},
                 ]} 
-                fetch={'http://localhost:3001/api/users/?query={"page":"1","perPage":"2","firstName":"","lastName":"","email":""}'}
+                fetch={'http://localhost:3001/api/users/?query={"page":"1","perPage":"4","firstName":"","lastName":"","email":""}'}
                 key={'users'}
               />
               </BigPanel> 
-        </div>
+       
 
         </div>
         </React.Fragment>
