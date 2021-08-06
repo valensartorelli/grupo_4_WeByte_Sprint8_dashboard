@@ -2,7 +2,7 @@ import React from 'react';
 
 import ProductsByCat from './ProductsByCat';
 import LastProduct from './LastProduct';
-import ContentRowMovies from './ContentRowMovies';
+import ContentRowProduct from './ContentRowProduct';
 
 function ContentRowTop(){
     return(
@@ -13,12 +13,12 @@ function ContentRowTop(){
 						<h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
 					</div>
 				
-					{/*<!-- Content Row Movies-->*/}
-					<ContentRowMovies />
-					{/*<!-- End movies in Data Base -->*/}
+					{/*<!-- Content Row Product-->*/}
+					<ContentRowProduct />
+					{/*<!-- End  Row Product -->*/}
 					
 	
-					{/*<!-- Content Row Last Movie in Data Base -->*/}
+					{/*<!-- Content Row Last Product in Data Base -->*/}
 					<div className="row">
 						<LastProduct />
 

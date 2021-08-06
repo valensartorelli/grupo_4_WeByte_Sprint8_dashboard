@@ -14,10 +14,10 @@ class BigPanel extends Component {
 
   render(){
     return(
-        <div className="col-lg-6 mb-4">						
+        <div className="col-lg-6 mb-4 ">						
           <div className="card shadow mb-4">
-            <div className="card-header py-3">
-              <h6 className="m-0 font-weight-bold icons-color">{ this.state.title }</h6>
+            <div className="card-header py-3 gris">
+              <h6 className="m-0 font-weight-bold icons-color ">{ this.state.title }</h6>
             </div>
             <div className="card-body">
 
