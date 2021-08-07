@@ -1,6 +1,6 @@
 import React from 'react';
-import Table from './Table'
-import BigPanel from './BigPanel'
+import TableProductList from "./TableProductList";
+import TableUserList from './TableUserList';
 
 
 function Product (){
@@ -8,32 +8,10 @@ function Product (){
             <React.Fragment>         
             {/*<!-- TABLE PRODUCTS LIST -->*/}
             <div className="row margin">
-           
-            <BigPanel title={"Listado de productos"} key='productsPanel'>
-                <Table heads={[
-                  {prop: 'id', title: 'ID'},
-                  {prop: 'name', title: 'Nombre'},
-                  {prop: 'price', title: 'Precio'},
-                  {prop: 'description', title: 'Descripcion'}
-                ]} 
-                fetch={'http://localhost:3001/api/products/?query={"page":"1","perPage":"4","name":"","description":""}'}
-                key={'products'}
-                />
-        </BigPanel>
-        <BigPanel title={"Listado de usuarios"} key={'usersPanel'}>
-              <Table 
-                heads={[
-                  {prop: 'id', title: 'ID'},
-                  {prop: 'firstName', title: 'Nombre'},
-                  {prop: 'lastName', title: 'Apellido'},
-                  {prop: 'email', title: 'Correo'},
-                ]} 
-                fetch={'http://localhost:3001/api/users/?query={"page":"1","perPage":"4","firstName":"","lastName":"","email":""}'}
-                key={'users'}
-              />
-              </BigPanel> 
-       
+              
+              <TableProductList />
 
+              <TableUserList />
         </div>
         </React.Fragment>
         );

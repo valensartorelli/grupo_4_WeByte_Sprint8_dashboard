@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TotalAmountPanel from './TotalAmountPanel'
-import SmallCard from './SmallCard';
+
 
 class ContentRowProduct extends Component {
     constructor(props) {

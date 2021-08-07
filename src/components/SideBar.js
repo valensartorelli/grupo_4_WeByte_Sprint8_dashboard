@@ -1,5 +1,13 @@
 import React from 'react';
 import image from '../assets/images/logo-weByte-blanco.png';
+import ContentWrapper from './ContentWrapper';
+import LinkTotales from './LinkTotales';
+import LinkLP from './LinkLP';
+import LinkProdByCat from './LinkProdByCat';
+import LinkProdList from './LinkProdList';
+import LinkUserList from "./LinkUserList";
+import NotFound from './NotFound';
+import { Link, Route, Switch } from "react-router-dom";
 
 function SideBar(){
     return(
@@ -19,9 +27,10 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Dashboard -->*/}
                 <li className="nav-item active">
-                    <a className="nav-link" href="/">
+                    <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard</span></a>
+                        <span>Dashboard</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -30,32 +39,73 @@ function SideBar(){
                 {/*<!-- Heading -->*/}
                 <div className="sidebar-heading">Actions</div>
 
-                {/*<!-- Nav Item - Pages -->*/}
+                {/*<!-- Nav Item - Totales -->*/}
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href="/">
-                        <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
-                    </a>
+                    <Link className="nav-link collapsed" to="/LinkTotales">
+                        <i className="fas fa-chart-pie"></i>
+                        <span>Totales</span>
+                    </Link>
                 </li>
 
-                {/*<!-- Nav Item - Charts -->*/}
+                {/*<!-- Nav Item - Last product -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
-                        <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></a>
+                    <Link className="nav-link collapsed" to="/LinkLP">
+                        <i className="fas fa-image"></i>
+                        <span>Último producto</span>
+                    </Link>
                 </li>
 
-                {/*<!-- Nav Item - Tables -->*/}
+                {/*<!-- Nav Item - Productos por categoría -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
+                    <Link className="nav-link" to="/LinkProdByCat">
+                        <i className="fas fa-tshirt"></i>
+                        <span>Productos por categoría</span>
+                    </Link>
+                </li>
+
+                {/*<!-- Nav Item - Listado de productos -->*/}
+                <li className="nav-item">
+                    <Link className="nav-link" to="/LinkProdList">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></a>
+                        <span>Listado de productos</span>
+                    </Link>
+                </li>
+
+                {/*<!-- Nav Item - Listado de usuarios -->*/}
+                <li className="nav-item">
+                    <Link className="nav-link" to="/LinkUserList">
+                        <i className="fas fa-fw fa-table"></i>
+                        <span>Listado de usuarios</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
             {/*<!-- End of Sidebar -->*/}
+
+            <Switch>
+                <Route exact path="/">
+                    <ContentWrapper />
+                </Route>
+                <Route path="/LinkLP">
+                    <LinkLP />
+                </Route>
+                <Route path="/LinkTotales">
+                    <LinkTotales />
+                </Route>
+                <Route path="/LinkProdByCat">
+                    <LinkProdByCat />
+                </Route>
+                <Route path="/LinkProdList">
+                    <LinkProdList />
+                </Route>
+                <Route path="/LinkUserList">
+                    <LinkUserList />
+                </Route>
+                <Route component={NotFound} />
+            </Switch>
+            
             
         </React.Fragment>
     )
