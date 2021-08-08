@@ -84,7 +84,7 @@ class LastProduct extends Component{
                                     </tr>
                                     <tr>
                                         <td>
-                                            <strong>Precio: </strong>${this.state.lastProd.price}
+                                            <strong>Estado: </strong>{this.state.lastProd.visibility}
                                         </td>
                                         <td>
                                             <strong>Stock: </strong>{this.state.lastProd.stock}
@@ -96,6 +96,11 @@ class LastProduct extends Component{
                                     <tr>
                                         <td colSpan="2">
                                             <strong>Mas información: </strong>{this.state.lastProd.extended_description}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colSpan="2">
+                                            <strong>Precio: </strong>${this.state.lastProd.price}
                                         </td>
                                     </tr>
                                     <tr>
