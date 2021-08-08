@@ -48,7 +48,7 @@ class ProductsByCat extends Component{
                 <div className="col-lg-6 mb-4">						
                     <div className="card shadow mb-4 " >
                         <div className="card-header py-3 gris">
-                            <h6 className="m-0 font-weight-bold text-white titulo">Productos por categoría</h6>
+                        <h5 className="m-0 font-weight-bold text-white-800">Productos por categoría</h5>
                         </div>
                         <div className="card-body fondoCaja">
                             <div  className="row">

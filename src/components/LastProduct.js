@@ -18,17 +18,33 @@ class LastProduct extends Component{
           this.setState({
             lastProd: {
                 id: lastProduct.id,
+                category: lastProduct.category,
                 name: lastProduct.name,
                 description: lastProduct.description,
+                extended_description: lastProduct.extended_description,
                 price: lastProduct.price,
                 color: lastProduct.color,
                 size: lastProduct.size,
-                image: lastProduct.image
+                stock: lastProduct.stock,
+                image: lastProduct.image,
+                visibility: lastProduct.visibilidad
             }
           })
         })
       }
       componentDidUpdate(){
+      }
+
+      masInfo(){
+        this.setState({
+          state:true
+        })
+      }
+    
+      cerrar(){
+        this.setState({
+          state:false
+        })
       }
 
 
@@ -41,12 +57,59 @@ class LastProduct extends Component{
                             <h5 className="m-0 font-weight-bold text-white-800">Último producto cargado</h5>
                         </div>
                         <div className="card-body">
-                            <div className="text-center">
-                                <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={`${this.state.lastProd.image}`} alt={this.state.lastProd.name} />
+                            <div className="text-center imgStyle"  style={{overflow: 'hidden'}}>
+                                <img className="img-fluid mb-4" style={{width: 100 +'%'}} src={`${this.state.lastProd.image}`} alt={this.state.lastProd.name} />
                             </div>
                             <h3> {this.state.lastProd.name} </h3>
                             <p> {this.state.lastProd.description} </p>
-                            <a className="btn btn-warning" target="_blank" rel="nofollow" href="/">View product detail</a>
+                            
+                            { this.state.state ? 
+                            <div>
+                                <table style={{width: 100 + '%'}}>
+                                    <tr>
+                                        <td>
+                                            <strong>ID: </strong>{this.state.lastProd.id} 
+                                        </td>
+                                        <td>
+                                            <strong>Categoría: </strong>{this.state.lastProd.category}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Color: </strong>{this.state.lastProd.color}
+                                        </td>
+                                        <td>
+                                            <strong>Talle: </strong>{this.state.lastProd.size}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Precio: </strong>${this.state.lastProd.price}
+                                        </td>
+                                        <td>
+                                            <strong>Stock: </strong>{this.state.lastProd.stock}
+                                        </td>
+                                    </tr>
+                                    <tr style={{lineHeight:5 + 'px'}}>
+                                        <td colSpan="2">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td colSpan="2">
+                                            <strong>Mas información: </strong>{this.state.lastProd.extended_description}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colSpan="2">&nbsp;</td>
+                                    </tr>
+                                </table>
+                            
+                           
+                        
+                            <span onClick={ () => this.cerrar() } rel="nofollow" id="less-info" className="btn btn-success" key="01">Cerrar</span> 
+                            </div>
+                            : 
+                            <span onClick={ () => this.masInfo() } rel="nofollow" id="more-info" className="btn btn-warning" key="02">Más info</span> 
+                            }
                         </div>
                     </div>
                 </div>

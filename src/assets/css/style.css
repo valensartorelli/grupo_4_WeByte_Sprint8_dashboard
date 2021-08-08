@@ -3,3 +3,4 @@
 .color-counter {background-color: #e4ff49; color: #000;}
 .gris {background-color: #363636; color: #ffffff;}
 .cont-totales{min-height: calc(100vh - 148px);margin: 0 15px;}
+.imgStyle{ height: 380px;overflow: 'hidden'; margin-bottom: 25px}
