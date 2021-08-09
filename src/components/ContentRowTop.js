@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ProductsByCat from './ProductsByCat';
-import ProductsByBrand from './ProductsByBrand';
+
 import LastProduct from './LastProduct';
 import ContentRowProduct from './ContentRowProduct';
 
@@ -28,9 +28,7 @@ function ContentRowTop(){
 						<ProductsByCat /> 
 						{/*<!--End Productos por categoria-->*/}
 
-						{/*<!-- Productos por marca -->*/}
-						<ProductsByBrand />
-						{/*<!--End Productos por marca-->*/}
+						
 					
 					</div>
 				</div>

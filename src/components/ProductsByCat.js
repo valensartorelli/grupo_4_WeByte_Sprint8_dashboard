@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 
 //Importar nuestro componente
 import Category from './Category';
+import ProductsByBrand from './ProductsByBrand';
 
 class ProductsByCat extends Component{
     constructor(props){
@@ -86,6 +87,10 @@ class ProductsByCat extends Component{
                             </div>
                         </div>
                     </div>
+
+                    {/*<!-- Productos por marca -->*/}
+						<ProductsByBrand />
+                    {/*<!--End Productos por marca-->*/}
                 </div>
     
     </React.Fragment>

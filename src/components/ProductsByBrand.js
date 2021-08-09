@@ -33,8 +33,7 @@ class ProductsByBrand extends Component{
     render(){
         return (
             <React.Fragment>
-                {/*<!-- Genres in DB -->*/}
-                <div className="col-lg-6 mb-4">						
+                {/*<!-- Genres in DB -->*/}					
                     <div className="card shadow mb-4 " >
                         <div className="card-header py-3 gris">
                         <h5 className="m-0 font-weight-bold text-white-800">Productos por marca</h5>
@@ -52,7 +51,6 @@ class ProductsByBrand extends Component{
                             </div>
                         </div>
                     </div>
-                </div>
     
     </React.Fragment>
     )
