@@ -68,28 +68,26 @@ class ContentRowProduct extends Component {
 
         render(){
             return(
-              <React.Fragment>
-                                    <div className="row">
-                                {this.state.metrics.length ?
-                                    this.state.metrics.map((metric, index) =>
-                                        <TotalAmountPanel
-                                            title={metric.title}
-                                            color={metric.color}
-                                            iconClass={metric.iconClass}
-                                            value={metric.value}
-                                            key={index}
-                                        />
-                                    )
-                                    :
-                                    <p> Cargando métricas </p>
-                                }
-        
-                            </div>
-        
-              </React.Fragment>
+                <React.Fragment>
+                    <div className="row">
+                        {this.state.metrics.length ?
+                            this.state.metrics.map((metric, index) =>
+                                <TotalAmountPanel
+                                    title={metric.title}
+                                    color={metric.color}
+                                    iconClass={metric.iconClass}
+                                    value={metric.value}
+                                    key={index}
+                                />
+                            )
+                            :
+                            <p> Cargando métricas </p>
+                        }
+                    </div>
+                </React.Fragment>
             )
-          }
         }
+    }
     
         
 export default ContentRowProduct;

@@ -81,7 +81,7 @@ class ProductsByCat extends Component{
                                     this.state.metrics && this.state.metrics.length ? this.state.metrics.map((metric, index)=>{
                                         return <Category title={metric.title} value={metric.value} key={index} />
                                     }) : null
-                                                                      
+                                                                    
                                 }
                             </div>
                         </div>
