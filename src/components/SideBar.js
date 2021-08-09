@@ -4,6 +4,7 @@ import ContentWrapper from './ContentWrapper';
 import LinkTotales from './LinkTotales';
 import LinkLP from './LinkLP';
 import LinkProdByCat from './LinkProdByCat';
+import LinkProdByBrand from './LinkProdByBrand';
 import LinkProdList from './LinkProdList';
 import LinkUserList from "./LinkUserList";
 import NotFound from './NotFound';
@@ -96,6 +97,9 @@ function SideBar(){
                 </Route>
                 <Route path="/LinkProdByCat">
                     <LinkProdByCat />
+                </Route>
+                <Route path="/LinkProdByBrand">
+                    <LinkProdByBrand />
                 </Route>
                 <Route path="/LinkProdList">
                     <LinkProdList />

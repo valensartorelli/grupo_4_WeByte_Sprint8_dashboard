@@ -1,8 +1,10 @@
 import React from 'react';
 
 import ProductsByCat from './ProductsByCat';
+import ProductsByBrand from './ProductsByBrand';
 import LastProduct from './LastProduct';
 import ContentRowProduct from './ContentRowProduct';
+
 
 function ContentRowTop(){
     return(
@@ -21,12 +23,15 @@ function ContentRowTop(){
 					{/*<!-- Content Row Last Product in Data Base -->*/}
 					<div className="row">
 						<LastProduct />
-
+						
 						{/*<!-- Productos por categoria -->*/}
-						<ProductsByCat />
-
+						<ProductsByCat /> 
 						{/*<!--End Productos por categoria-->*/}
-		
+
+						{/*<!-- Productos por marca -->*/}
+						<ProductsByBrand />
+						{/*<!--End Productos por marca-->*/}
+					
 					</div>
 				</div>
 				{/*<!--End Content Row Top-->*/}
