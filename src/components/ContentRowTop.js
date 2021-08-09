@@ -25,7 +25,8 @@ function ContentRowTop(){
 						{/*<!-- Productos por categoria -->*/}
 						<ProductsByCat />
 
-						{/*<!--End Productos por categoria-->*/}		
+						{/*<!--End Productos por categoria-->*/}
+		
 					</div>
 				</div>
 				{/*<!--End Content Row Top-->*/}

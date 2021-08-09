@@ -6,10 +6,10 @@ import React, {Component} from 'react';
 import Category from './Category';
 
 class ProductsByCat extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state ={
-            categoryList : []
+            metrics:[]
         }
     }
     //Compomentes Ciclo de vida - Montar - Actualizar - Desmontar
@@ -27,16 +27,39 @@ class ProductsByCat extends Component{
 
     // }
 
-    async componentDidMount() {
-        let props = await (await fetch('http://localhost:3001/api/products')).json();
-        // console.log(props);
-        if (props) {
-            this.setState({categoryList: props.meta.countByCategory})
-            console.log(this.state.categoryList);
-        }
+    componentDidMount() {
+        fetch("http://localhost:3001/api/products")
+            .then(result => result.json())
+            .then(result => {
 
+                let products = result.meta;
+
+
+                this.setState({
+                    metrics:[{ 
+                            title: "Categoría hombre",
+                            color: "info",
+                            value: products.countByCategory.hombre
+                        },
+                        { 
+                            title: "Categoría mujer",
+                            color: "info",
+                            value: products.countByCategory.mujer
+                        },
+                        { 
+                            title: "Categoría niños",
+                            color: "info",
+                            value: products.countByCategory.ninio
+                        }]
+                    //{
+                    //hombre: products.countByCategory.hombre,
+                    //mujer: products.countByCategory.mujer,
+                    //niños: products.countByCategory.niños
+                   // }
+    
+                });
+            })
     }
-
 
 
 
@@ -52,14 +75,13 @@ class ProductsByCat extends Component{
                         </div>
                         <div className="card-body fondoCaja">
                             <div  className="row">
-                            
                                 {
                                     //console.log(this.state.genresList)
                                     //pregunto si existe primero
-                                    this.state.categoryList && this.state.categoryList.length ? this.state.categoryList.map((produc, index)=>{
-                                        return <Category  {...produc}  key={index} />
+                                    this.state.metrics && this.state.metrics.length ? this.state.metrics.map((metric, index)=>{
+                                        return <Category title={metric.title} value={metric.value} key={index} />
                                     }) : null
-                                    
+                                                                      
                                 }
                             </div>
                         </div>
