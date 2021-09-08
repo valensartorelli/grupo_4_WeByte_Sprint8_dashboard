@@ -12,7 +12,7 @@ class ContentRowProduct extends Component {
 
     // componentDidMount() {
 
-    //     fetch("http://localhost:3000/api/products")
+    //     fetch("https://grupo-4-webyte.herokuapp.com/api/products")
     //         .then(result => result.json())
     //         .then(result => {
 
@@ -20,10 +20,10 @@ class ContentRowProduct extends Component {
     componentDidMount(){
 
         let promises = [
-          fetch("http://localhost:3000/api/products").then(result => result.json()),
-          fetch("http://localhost:3000/api/users").then(result => result.json()),
-          fetch("http://localhost:3001/api/categories").then(result => result.json()),
-          fetch("http://localhost:3000/api/brands").then(result => result.json())
+          fetch("https://grupo-4-webyte.herokuapp.com/api/products").then(result => result.json()),
+          fetch("https://grupo-4-webyte.herokuapp.com/api/users").then(result => result.json()),
+          fetch("https://grupo-4-webyte.herokuapp.com/api/categories").then(result => result.json()),
+          fetch("https://grupo-4-webyte.herokuapp.com/api/brands").then(result => result.json())
         ];
     
         Promise.all(promises)

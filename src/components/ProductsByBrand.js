@@ -14,7 +14,7 @@ class ProductsByBrand extends Component{
     }
 
     componentDidMount() {
-        fetch("http://localhost:3001/api/products")
+        fetch("https://grupo-4-webyte.herokuapp.com/api/products")
             .then(result => result.json())
             .then(result => {
 

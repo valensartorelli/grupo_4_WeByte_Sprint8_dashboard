@@ -11,7 +11,7 @@ class LastProduct extends Component{
     //Compomentes Ciclo de vida - Montar - Actualizar - Desmontar
     //Montaje 
     componentDidMount(){
-        fetch("http://localhost:3001/api/products/latest")
+        fetch("https://grupo-4-webyte.herokuapp.com/api/products/latest")
         .then(result => result.json())
         .then(result => {
           let lastProduct = result.data;

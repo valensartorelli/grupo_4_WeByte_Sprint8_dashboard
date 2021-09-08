@@ -11,7 +11,7 @@ class Product extends Component {
     }
 
     async componentDidMount() {
-        let props = await (await fetch('http://localhost:3001/api/products')).json();
+        let props = await (await fetch('https://grupo-4-webyte.herokuapp.com/api/products')).json();
         // console.log(props);
         if (props) {
             this.setState({products: props.data.list})

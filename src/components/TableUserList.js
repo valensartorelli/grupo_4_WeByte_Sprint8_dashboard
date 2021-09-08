@@ -13,7 +13,7 @@ function TableProductList(){
                   {prop: 'lastName', title: 'Apellido'},
                   {prop: 'email', title: 'Correo'},
                 ]} 
-                fetch={'http://localhost:3001/api/users/?query={"page":"1","perPage":"4","firstName":"","lastName":"","email":""}'}
+                fetch={'https://grupo-4-webyte.herokuapp.com/api/users/?query={"page":"1","perPage":"4","firstName":"","lastName":"","email":""}'}
                 key={'users'}
               />
             </BigPanel> 

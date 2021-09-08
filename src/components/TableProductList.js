@@ -12,7 +12,7 @@ function TableProductList(){
                   {prop: 'price', title: 'Precio'},
                   {prop: 'description', title: 'Descripcion'}
                 ]} 
-                fetch={'http://localhost:3000/api/products/?query={"page":"1","perPage":"4","name":"","description":""}'}
+                fetch={'https://grupo-4-webyte.herokuapp.com/api/products/?query={"page":"1","perPage":"4","name":"","description":""}'}
                 key={'products'}
                 />
             </BigPanel>
